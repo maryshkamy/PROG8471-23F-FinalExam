@@ -7,29 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		287E73CF2B24B0320093C604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E73CE2B24B0320093C604 /* AppDelegate.swift */; };
-		287E73D12B24B0320093C604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E73D02B24B0320093C604 /* SceneDelegate.swift */; };
-		287E73D32B24B0320093C604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E73D22B24B0320093C604 /* ViewController.swift */; };
-		287E73D62B24B0320093C604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287E73D42B24B0320093C604 /* Main.storyboard */; };
-		287E73D92B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 287E73D72B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodeld */; };
-		287E73DB2B24B0340093C604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287E73DA2B24B0340093C604 /* Assets.xcassets */; };
-		287E73DE2B24B0340093C604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287E73DC2B24B0340093C604 /* LaunchScreen.storyboard */; };
+		282BA9BA2B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 282BA9B72B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */; };
+		282BA9BB2B25301A00A4E6B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282BA9B92B25301A00A4E6B4 /* MainViewController.swift */; };
+		287E73F52B24FBFC0093C604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E73F42B24FBFC0093C604 /* AppDelegate.swift */; };
+		287E73F72B24FBFC0093C604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E73F62B24FBFC0093C604 /* SceneDelegate.swift */; };
+		287E73FF2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 287E73FD2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */; };
+		287E74012B24FBFD0093C604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287E74002B24FBFD0093C604 /* Assets.xcassets */; };
+		287E74042B24FBFD0093C604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287E74022B24FBFD0093C604 /* LaunchScreen.storyboard */; };
+		287E740E2B24FFE90093C604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287E740C2B24FFE90093C604 /* Main.storyboard */; };
+		287E74142B2521AD0093C604 /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		287E73CB2B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE_ 8903346.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mariana_RiosSilveiraCarvalho_FE_ 8903346.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		287E73CE2B24B0320093C604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		287E73D02B24B0320093C604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		287E73D22B24B0320093C604 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		287E73D52B24B0320093C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		287E73D82B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodel; sourceTree = "<group>"; };
-		287E73DA2B24B0340093C604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		287E73DD2B24B0340093C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		287E73DF2B24B0340093C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		282BA9B82B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel; sourceTree = "<group>"; };
+		282BA9B92B25301A00A4E6B4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		287E73F12B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mariana_RiosSilveiraCarvalho_FE_8903346.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		287E73F42B24FBFC0093C604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		287E73F62B24FBFC0093C604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		287E73FE2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel; sourceTree = "<group>"; };
+		287E74002B24FBFD0093C604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		287E74032B24FBFD0093C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		287E74052B24FBFD0093C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		287E740D2B24FFE90093C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Mariana_RiosSilveiraCarvalho_FE_ 8903346/Mariana_RiosSilveiraCarvalho_FE_ 8903346/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		287E73C82B24B0320093C604 /* Frameworks */ = {
+		287E73EE2B24FBFC0093C604 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,73 +43,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		287E73C22B24B0320093C604 = {
+		282BA9BC2B25303800A4E6B4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				287E73CD2B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE_ 8903346 */,
-				287E73CC2B24B0320093C604 /* Products */,
+				282BA9B92B25301A00A4E6B4 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		287E73E82B24FBFC0093C604 = {
+			isa = PBXGroup;
+			children = (
+				287E73F32B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346 */,
+				287E73F22B24FBFC0093C604 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		287E73CC2B24B0320093C604 /* Products */ = {
+		287E73F22B24FBFC0093C604 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				287E73CB2B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE_ 8903346.app */,
+				287E73F12B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		287E73CD2B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE_ 8903346 */ = {
+		287E73F32B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346 */ = {
 			isa = PBXGroup;
 			children = (
-				287E73CE2B24B0320093C604 /* AppDelegate.swift */,
-				287E73D02B24B0320093C604 /* SceneDelegate.swift */,
-				287E73D22B24B0320093C604 /* ViewController.swift */,
-				287E73D42B24B0320093C604 /* Main.storyboard */,
-				287E73DA2B24B0340093C604 /* Assets.xcassets */,
-				287E73DC2B24B0340093C604 /* LaunchScreen.storyboard */,
-				287E73DF2B24B0340093C604 /* Info.plist */,
-				287E73D72B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodeld */,
+				287E74052B24FBFD0093C604 /* Info.plist */,
+				287E73F42B24FBFC0093C604 /* AppDelegate.swift */,
+				287E73F62B24FBFC0093C604 /* SceneDelegate.swift */,
+				287E74002B24FBFD0093C604 /* Assets.xcassets */,
+				287E74112B25216F0093C604 /* Extensions */,
+				287E74022B24FBFD0093C604 /* LaunchScreen.storyboard */,
+				282BA9BC2B25303800A4E6B4 /* Main */,
+				287E740C2B24FFE90093C604 /* Main.storyboard */,
+				282BA9B72B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */,
+				287E73FD2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */,
 			);
-			path = "Mariana_RiosSilveiraCarvalho_FE_ 8903346";
+			path = Mariana_RiosSilveiraCarvalho_FE_8903346;
+			sourceTree = "<group>";
+		};
+		287E74112B25216F0093C604 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		287E73CA2B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE_ 8903346 */ = {
+		287E73F02B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 287E73E22B24B0340093C604 /* Build configuration list for PBXNativeTarget "Mariana_RiosSilveiraCarvalho_FE_ 8903346" */;
+			buildConfigurationList = 287E74082B24FBFD0093C604 /* Build configuration list for PBXNativeTarget "Mariana_RiosSilveiraCarvalho_FE_8903346" */;
 			buildPhases = (
-				287E73C72B24B0320093C604 /* Sources */,
-				287E73C82B24B0320093C604 /* Frameworks */,
-				287E73C92B24B0320093C604 /* Resources */,
+				287E73ED2B24FBFC0093C604 /* Sources */,
+				287E73EE2B24FBFC0093C604 /* Frameworks */,
+				287E73EF2B24FBFC0093C604 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Mariana_RiosSilveiraCarvalho_FE_ 8903346";
-			productName = "Mariana_RiosSilveiraCarvalho_FE_ 8903346";
-			productReference = 287E73CB2B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE_ 8903346.app */;
+			name = Mariana_RiosSilveiraCarvalho_FE_8903346;
+			productName = Mariana_RiosSilveiraCarvalho_FE_8903346;
+			productReference = 287E73F12B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		287E73C32B24B0320093C604 /* Project object */ = {
+		287E73E92B24FBFC0093C604 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					287E73CA2B24B0320093C604 = {
+					287E73F02B24FBFC0093C604 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 287E73C62B24B0320093C604 /* Build configuration list for PBXProject "Mariana_RiosSilveiraCarvalho_FE_ 8903346" */;
+			buildConfigurationList = 287E73EC2B24FBFC0093C604 /* Build configuration list for PBXProject "Mariana_RiosSilveiraCarvalho_FE_8903346" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,64 +135,66 @@
 				en,
 				Base,
 			);
-			mainGroup = 287E73C22B24B0320093C604;
-			productRefGroup = 287E73CC2B24B0320093C604 /* Products */;
+			mainGroup = 287E73E82B24FBFC0093C604;
+			productRefGroup = 287E73F22B24FBFC0093C604 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				287E73CA2B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE_ 8903346 */,
+				287E73F02B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		287E73C92B24B0320093C604 /* Resources */ = {
+		287E73EF2B24FBFC0093C604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				287E73DE2B24B0340093C604 /* LaunchScreen.storyboard in Resources */,
-				287E73DB2B24B0340093C604 /* Assets.xcassets in Resources */,
-				287E73D62B24B0320093C604 /* Main.storyboard in Resources */,
+				287E740E2B24FFE90093C604 /* Main.storyboard in Resources */,
+				287E74042B24FBFD0093C604 /* LaunchScreen.storyboard in Resources */,
+				287E74012B24FBFD0093C604 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		287E73C72B24B0320093C604 /* Sources */ = {
+		287E73ED2B24FBFC0093C604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				287E73D32B24B0320093C604 /* ViewController.swift in Sources */,
-				287E73CF2B24B0320093C604 /* AppDelegate.swift in Sources */,
-				287E73D92B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodeld in Sources */,
-				287E73D12B24B0320093C604 /* SceneDelegate.swift in Sources */,
+				282BA9BA2B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */,
+				287E73F52B24FBFC0093C604 /* AppDelegate.swift in Sources */,
+				287E73FF2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */,
+				282BA9BB2B25301A00A4E6B4 /* MainViewController.swift in Sources */,
+				287E74142B2521AD0093C604 /* UIViewController+UIAlertController.swift in Sources */,
+				287E73F72B24FBFC0093C604 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		287E73D42B24B0320093C604 /* Main.storyboard */ = {
+		287E74022B24FBFD0093C604 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				287E73D52B24B0320093C604 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		287E73DC2B24B0340093C604 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				287E73DD2B24B0340093C604 /* Base */,
+				287E74032B24FBFD0093C604 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		287E740C2B24FFE90093C604 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287E740D2B24FFE90093C604 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		287E73E02B24B0340093C604 /* Debug */ = {
+		287E74062B24FBFD0093C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -233,7 +257,7 @@
 			};
 			name = Debug;
 		};
-		287E73E12B24B0340093C604 /* Release */ = {
+		287E74072B24FBFD0093C604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -289,7 +313,7 @@
 			};
 			name = Release;
 		};
-		287E73E32B24B0340093C604 /* Debug */ = {
+		287E74092B24FBFD0093C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -297,7 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mariana_RiosSilveiraCarvalho_FE_ 8903346/Info.plist";
+				INFOPLIST_FILE = Mariana_RiosSilveiraCarvalho_FE_8903346/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -308,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.on.conestogac.Mariana-RiosSilveiraCarvalho-FE--8903346";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.on.conestogac.Mariana-RiosSilveiraCarvalho-FE-8903346";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -316,7 +340,7 @@
 			};
 			name = Debug;
 		};
-		287E73E42B24B0340093C604 /* Release */ = {
+		287E740A2B24FBFD0093C604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -324,7 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Mariana_RiosSilveiraCarvalho_FE_ 8903346/Info.plist";
+				INFOPLIST_FILE = Mariana_RiosSilveiraCarvalho_FE_8903346/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -335,7 +359,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.on.conestogac.Mariana-RiosSilveiraCarvalho-FE--8903346";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.on.conestogac.Mariana-RiosSilveiraCarvalho-FE-8903346";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -346,20 +370,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		287E73C62B24B0320093C604 /* Build configuration list for PBXProject "Mariana_RiosSilveiraCarvalho_FE_ 8903346" */ = {
+		287E73EC2B24FBFC0093C604 /* Build configuration list for PBXProject "Mariana_RiosSilveiraCarvalho_FE_8903346" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				287E73E02B24B0340093C604 /* Debug */,
-				287E73E12B24B0340093C604 /* Release */,
+				287E74062B24FBFD0093C604 /* Debug */,
+				287E74072B24FBFD0093C604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		287E73E22B24B0340093C604 /* Build configuration list for PBXNativeTarget "Mariana_RiosSilveiraCarvalho_FE_ 8903346" */ = {
+		287E74082B24FBFD0093C604 /* Build configuration list for PBXNativeTarget "Mariana_RiosSilveiraCarvalho_FE_8903346" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				287E73E32B24B0340093C604 /* Debug */,
-				287E73E42B24B0340093C604 /* Release */,
+				287E74092B24FBFD0093C604 /* Debug */,
+				287E740A2B24FBFD0093C604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -367,17 +391,27 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		287E73D72B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodeld */ = {
+		282BA9B72B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				287E73D82B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodel */,
+				282BA9B82B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */,
 			);
-			currentVersion = 287E73D82B24B0320093C604 /* Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodel */;
-			path = Mariana_RiosSilveiraCarvalho_FE__8903346.xcdatamodeld;
+			currentVersion = 282BA9B82B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */;
+			path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		287E73FD2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				287E73FE2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */,
+			);
+			currentVersion = 287E73FE2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */;
+			path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 287E73C32B24B0320093C604 /* Project object */;
+	rootObject = 287E73E92B24FBFC0093C604 /* Project object */;
 }

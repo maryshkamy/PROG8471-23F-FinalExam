@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Mariana_RiosSilveiraCarvalho_FE_ 8903346
+//  Mariana_RiosSilveiraCarvalho_FE_8903346
 //
 //  Created by Mariana Rios Silveira Carvalho on 2023-12-09.
 //
@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Mariana_RiosSilveiraCarvalho_FE__8903346")
+        let container = NSPersistentContainer(name: "Mariana_RiosSilveiraCarvalho_FE_8903346")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
