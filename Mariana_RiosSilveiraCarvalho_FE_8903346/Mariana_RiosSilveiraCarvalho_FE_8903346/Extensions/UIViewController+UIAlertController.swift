@@ -8,8 +8,10 @@
 import UIKit
 
 extension UIViewController {
-    func showErrorAlert() {
-        let alert = UIAlertController(title: "Error", message: "Please, enter a valid location.", preferredStyle: .alert)
+
+    // MARK: - Show an alert error message
+    func showErrorAlert(_ title: String = "Error", _ message: String = "Please, enter a valid location.") {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
 
         self.present(alert, animated: true, completion: nil)

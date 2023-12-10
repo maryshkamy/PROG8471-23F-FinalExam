@@ -7,28 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		282BA9BA2B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 282BA9B72B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */; };
 		282BA9BB2B25301A00A4E6B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282BA9B92B25301A00A4E6B4 /* MainViewController.swift */; };
+		286597662B2531DE006D51D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286597642B2531DE006D51D0 /* Main.storyboard */; };
+		2865976B2B255AA3006D51D0 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865976A2B255AA3006D51D0 /* WeatherViewController.swift */; };
+		2865976D2B255ACE006D51D0 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865976C2B255ACE006D51D0 /* WeatherViewModel.swift */; };
+		2865976F2B255BAD006D51D0 /* Double+Convertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865976E2B255BAD006D51D0 /* Double+Convertions.swift */; };
+		286597712B255BDC006D51D0 /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286597702B255BDC006D51D0 /* UIImageView+LoadImage.swift */; };
+		286597732B25651C006D51D0 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286597722B25651C006D51D0 /* Weather.swift */; };
+		286597752B256525006D51D0 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286597742B256525006D51D0 /* Clouds.swift */; };
+		286597772B256535006D51D0 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286597762B256535006D51D0 /* Coordinate.swift */; };
+		286597792B256539006D51D0 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286597782B256539006D51D0 /* Main.swift */; };
+		2865977B2B25653F006D51D0 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865977A2B25653F006D51D0 /* Wind.swift */; };
+		2865977D2B25654A006D51D0 /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865977C2B25654A006D51D0 /* WeatherInfo.swift */; };
+		2865977F2B256551006D51D0 /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865977E2B256551006D51D0 /* Sys.swift */; };
+		286597812B256F32006D51D0 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286597802B256F32006D51D0 /* UIViewController+CoreData.swift */; };
+		286597852B258643006D51D0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 286597832B258643006D51D0 /* Model.xcdatamodeld */; };
+		286597882B263FB4006D51D0 /* NewSearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286597872B263FB4006D51D0 /* NewSearchData.swift */; };
 		287E73F52B24FBFC0093C604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E73F42B24FBFC0093C604 /* AppDelegate.swift */; };
 		287E73F72B24FBFC0093C604 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E73F62B24FBFC0093C604 /* SceneDelegate.swift */; };
-		287E73FF2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 287E73FD2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */; };
 		287E74012B24FBFD0093C604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287E74002B24FBFD0093C604 /* Assets.xcassets */; };
 		287E74042B24FBFD0093C604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287E74022B24FBFD0093C604 /* LaunchScreen.storyboard */; };
-		287E740E2B24FFE90093C604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287E740C2B24FFE90093C604 /* Main.storyboard */; };
 		287E74142B2521AD0093C604 /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		282BA9B82B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel; sourceTree = "<group>"; };
 		282BA9B92B25301A00A4E6B4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		286597652B2531DE006D51D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2865976A2B255AA3006D51D0 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		2865976C2B255ACE006D51D0 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		2865976E2B255BAD006D51D0 /* Double+Convertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Convertions.swift"; sourceTree = "<group>"; };
+		286597702B255BDC006D51D0 /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
+		286597722B25651C006D51D0 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		286597742B256525006D51D0 /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		286597762B256535006D51D0 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		286597782B256539006D51D0 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		2865977A2B25653F006D51D0 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		2865977C2B25654A006D51D0 /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
+		2865977E2B256551006D51D0 /* Sys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
+		286597802B256F32006D51D0 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
+		286597842B258643006D51D0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		286597872B263FB4006D51D0 /* NewSearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSearchData.swift; sourceTree = "<group>"; };
 		287E73F12B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mariana_RiosSilveiraCarvalho_FE_8903346.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287E73F42B24FBFC0093C604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		287E73F62B24FBFC0093C604 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		287E73FE2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel; sourceTree = "<group>"; };
 		287E74002B24FBFD0093C604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287E74032B24FBFD0093C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		287E74052B24FBFD0093C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		287E740D2B24FFE90093C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Mariana_RiosSilveiraCarvalho_FE_ 8903346/Mariana_RiosSilveiraCarvalho_FE_ 8903346/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +73,54 @@
 				282BA9B92B25301A00A4E6B4 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		286597672B255A68006D51D0 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				2865976A2B255AA3006D51D0 /* WeatherViewController.swift */,
+				2865976C2B255ACE006D51D0 /* WeatherViewModel.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		286597682B255A79006D51D0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				286597862B263FA3006D51D0 /* Model */,
+				286597692B255A8A006D51D0 /* Weather */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		286597692B255A8A006D51D0 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				286597742B256525006D51D0 /* Clouds.swift */,
+				286597762B256535006D51D0 /* Coordinate.swift */,
+				286597782B256539006D51D0 /* Main.swift */,
+				2865977E2B256551006D51D0 /* Sys.swift */,
+				286597722B25651C006D51D0 /* Weather.swift */,
+				2865977C2B25654A006D51D0 /* WeatherInfo.swift */,
+				2865977A2B25653F006D51D0 /* Wind.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		286597822B258615006D51D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				286597832B258643006D51D0 /* Model.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		286597862B263FA3006D51D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				286597872B263FB4006D51D0 /* NewSearchData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		287E73E82B24FBFC0093C604 = {
@@ -74,12 +146,13 @@
 				287E73F42B24FBFC0093C604 /* AppDelegate.swift */,
 				287E73F62B24FBFC0093C604 /* SceneDelegate.swift */,
 				287E74002B24FBFD0093C604 /* Assets.xcassets */,
+				286597682B255A79006D51D0 /* Entity */,
 				287E74112B25216F0093C604 /* Extensions */,
 				287E74022B24FBFD0093C604 /* LaunchScreen.storyboard */,
 				282BA9BC2B25303800A4E6B4 /* Main */,
-				287E740C2B24FFE90093C604 /* Main.storyboard */,
-				282BA9B72B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */,
-				287E73FD2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */,
+				286597642B2531DE006D51D0 /* Main.storyboard */,
+				286597822B258615006D51D0 /* Model */,
+				286597672B255A68006D51D0 /* Weather */,
 			);
 			path = Mariana_RiosSilveiraCarvalho_FE_8903346;
 			sourceTree = "<group>";
@@ -87,7 +160,10 @@
 		287E74112B25216F0093C604 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2865976E2B255BAD006D51D0 /* Double+Convertions.swift */,
+				286597702B255BDC006D51D0 /* UIImageView+LoadImage.swift */,
 				287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */,
+				286597802B256F32006D51D0 /* UIViewController+CoreData.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -150,7 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				287E740E2B24FFE90093C604 /* Main.storyboard in Resources */,
+				286597662B2531DE006D51D0 /* Main.storyboard in Resources */,
 				287E74042B24FBFD0093C604 /* LaunchScreen.storyboard in Resources */,
 				287E74012B24FBFD0093C604 /* Assets.xcassets in Resources */,
 			);
@@ -163,32 +239,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				282BA9BA2B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */,
+				2865977D2B25654A006D51D0 /* WeatherInfo.swift in Sources */,
+				286597712B255BDC006D51D0 /* UIImageView+LoadImage.swift in Sources */,
+				286597882B263FB4006D51D0 /* NewSearchData.swift in Sources */,
+				2865976F2B255BAD006D51D0 /* Double+Convertions.swift in Sources */,
 				287E73F52B24FBFC0093C604 /* AppDelegate.swift in Sources */,
-				287E73FF2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld in Sources */,
+				2865976D2B255ACE006D51D0 /* WeatherViewModel.swift in Sources */,
+				286597812B256F32006D51D0 /* UIViewController+CoreData.swift in Sources */,
+				2865977F2B256551006D51D0 /* Sys.swift in Sources */,
+				286597732B25651C006D51D0 /* Weather.swift in Sources */,
+				286597852B258643006D51D0 /* Model.xcdatamodeld in Sources */,
+				286597772B256535006D51D0 /* Coordinate.swift in Sources */,
+				286597792B256539006D51D0 /* Main.swift in Sources */,
+				2865976B2B255AA3006D51D0 /* WeatherViewController.swift in Sources */,
 				282BA9BB2B25301A00A4E6B4 /* MainViewController.swift in Sources */,
 				287E74142B2521AD0093C604 /* UIViewController+UIAlertController.swift in Sources */,
 				287E73F72B24FBFC0093C604 /* SceneDelegate.swift in Sources */,
+				286597752B256525006D51D0 /* Clouds.swift in Sources */,
+				2865977B2B25653F006D51D0 /* Wind.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		286597642B2531DE006D51D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				286597652B2531DE006D51D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		287E74022B24FBFD0093C604 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				287E74032B24FBFD0093C604 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		287E740C2B24FFE90093C604 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				287E740D2B24FFE90093C604 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -391,23 +479,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		282BA9B72B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */ = {
+		286597832B258643006D51D0 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				282BA9B82B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */,
+				286597842B258643006D51D0 /* Model.xcdatamodel */,
 			);
-			currentVersion = 282BA9B82B25301A00A4E6B4 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */;
-			path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		287E73FD2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				287E73FE2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */,
-			);
-			currentVersion = 287E73FE2B24FBFC0093C604 /* Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodel */;
-			path = Mariana_RiosSilveiraCarvalho_FE_8903346.xcdatamodeld;
+			currentVersion = 286597842B258643006D51D0 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
