@@ -56,6 +56,41 @@ extension UIViewController {
         self.create(entity: "SearchHistory", data: newHistory, completion: completion)
     }
 
+    func retrieveSearchHistory(completion: ([SearchHistoryData]) -> Void) {
+        self.read(entity: "SearchHistory") { response in
+            if let response = response {
+                var searchHistory: [SearchHistoryData] = []
+
+                for data in response as! [NSManagedObject] {
+                    let searchData = SearchData(
+                        city: data.value(forKey: "city") as! String,
+                        source: data.value(forKey: "source") as! String,
+                        type: data.value(forKey: "type") as! String
+                    )
+
+                    var weatherData: WeatherData?
+                    if (data.value(forKey: "weatherCity") as? String) != nil {
+                        weatherData = WeatherData(
+                            city: data.value(forKey: "weatherCity") as! String,
+                            date: data.value(forKey: "weatherDate") as! Date,
+                            description: data.value(forKey: "weatherDescription") as! String,
+                            humidity: data.value(forKey: "weatherHumidity") as! Int,
+                            icon: data.value(forKey: "weatherIcon") as! String,
+                            temperature: data.value(forKey: "weatherTemperature") as! Double,
+                            wind: data.value(forKey: "weatherWind") as! Double
+                        )
+                    }
+
+                    searchHistory.append(SearchHistoryData(search: searchData, weather: weatherData))
+                }
+
+                completion(searchHistory)
+            } else {
+                completion([])
+            }
+        }
+    }
+
     // MARK: - CRUD: Create a data at the specific entity
     fileprivate func create(entity: String, data: [String: Any], completion: @escaping (Bool) -> Void) {
         DispatchQueue.main.async {

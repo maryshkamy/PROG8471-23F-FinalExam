@@ -9,5 +9,7 @@ import Foundation
 
 struct SearchHistoryData {
     let search: SearchData
+//    let news: Any?
+//    let directions: Any?
     let weather: WeatherData?
 }
