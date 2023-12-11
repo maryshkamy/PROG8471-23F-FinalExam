@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,20 +13,36 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand-painted-watercolor-pastel-sky-background_23-2148902771" translatesAutoresizingMaskIntoConstraints="NO" id="DKL-CU-SwJ">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="DKL-CU-SwJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="BLg-xZ-L08">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mariana Rios Silveira Carvalho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBQ-VO-GUa">
+                                <rect key="frame" x="8" y="842" width="398" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DKL-CU-SwJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0Yd-hE-yIH"/>
+                            <constraint firstItem="BLg-xZ-L08" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CAc-Xe-ghf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BLg-xZ-L08" secondAttribute="bottom" id="I9f-pT-8ic"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HBQ-VO-GUa" secondAttribute="trailing" constant="8" id="LWV-bY-eoB"/>
                             <constraint firstAttribute="trailing" secondItem="DKL-CU-SwJ" secondAttribute="trailing" id="MYk-DX-BjW"/>
                             <constraint firstItem="DKL-CU-SwJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="NHl-hf-6VW"/>
+                            <constraint firstItem="BLg-xZ-L08" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NVe-HN-frA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HBQ-VO-GUa" secondAttribute="bottom" constant="8" id="TMh-ug-9hz"/>
                             <constraint firstAttribute="bottom" secondItem="DKL-CU-SwJ" secondAttribute="bottom" id="TtM-67-3QN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BLg-xZ-L08" secondAttribute="trailing" id="hiW-6E-vCe"/>
+                            <constraint firstItem="HBQ-VO-GUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="sMR-E9-MZq"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +52,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hand-painted-watercolor-pastel-sky-background_23-2148902771" width="626" height="417"/>
+        <image name="Background" width="626" height="417"/>
+        <image name="Logo" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
