@@ -24,7 +24,15 @@ class WeatherViewController: UIViewController {
     // MARK: - Private Variables
     private let viewModel: WeatherViewModelProtocol
 
+    // MARK: - Public Variables
+    var weatherData: WeatherData?
+
     // MARK: - Initializer
+    init() {
+        self.viewModel = WeatherViewModel()
+        super.init(nibName: nil, bundle: nil)
+    }
+
     required init?(coder: NSCoder) {
         self.viewModel = WeatherViewModel()
         super.init(coder: coder)
@@ -38,17 +46,7 @@ class WeatherViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.retrieveNewSearch { newSearchData in
-            if let data = newSearchData {
-                self.icon.image = UIImage()
-                self.activityIndicator.startAnimating()
-                self.viewModel.didUpdateLocation(data)
-            } else {
-                self.createNewSearchAlert { _ in
-                    self.navigationController?.tabBarController?.selectedIndex = 0
-                }
-            }
-        }
+        self.loadData()
     }
 
     // MARK: - Private Functions
@@ -67,6 +65,24 @@ class WeatherViewController: UIViewController {
         self.humidityLabel.text = ""
         self.windSpeedLabel.text = ""
         self.temperatureLabel.text = ""
+    }
+
+    private func loadData() {
+        if let weatherData = self.weatherData {
+            self.viewModel.load(weatherData)
+        } else {
+            self.retrieveNewSearch { newSearchData in
+                if let data = newSearchData {
+                    self.icon.image = UIImage()
+                    self.activityIndicator.startAnimating()
+                    self.viewModel.didUpdateLocation(data)
+                } else {
+                    self.createNewSearchAlert { _ in
+                        self.navigationController?.tabBarController?.selectedIndex = 0
+                    }
+                }
+            }
+        }
     }
 
     private func createNewSearchAlert(cancelHandler: ((UIAlertAction) -> Void)? = nil) {
@@ -138,6 +154,7 @@ extension WeatherViewController: WeatherViewModelDelegate {
     }
 
     func updateCoreData(with searchData: SearchData, and weather: WeatherData) {
+        self.weatherData = weather
         self.create(searchHistory: SearchHistoryData(search: searchData, weather: weather)) { response in
             print(response)
         }

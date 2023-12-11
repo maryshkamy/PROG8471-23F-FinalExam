@@ -16,6 +16,7 @@ class HistoryTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadData()
+        self.tabBarController?.tabBar.isHidden = true
     }
 
     override func viewDidLoad() {
@@ -70,49 +71,29 @@ class HistoryTableViewController: UITableViewController {
         return UITableViewCell()
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let history = self.viewModel.dataSource[indexPath.row]
 
-    /*
-    // Override to support editing the table view.
+        if let weather = history.weather {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let destination = storyboard.instantiateViewController(withIdentifier: "Weather") as! WeatherViewController
+            destination.weatherData = weather
+            self.navigationController?.pushViewController(destination, animated: true)
+        }
+    }
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            let data = self.viewModel.dataSource[indexPath.row]
+            self.delete(searchHistory: data) { response in
+                if response {
+                    self.viewModel.remove(index: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                } else {
+                    self.showErrorAlert("Error", "We could not delete the data. Please try again.")
+                }
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

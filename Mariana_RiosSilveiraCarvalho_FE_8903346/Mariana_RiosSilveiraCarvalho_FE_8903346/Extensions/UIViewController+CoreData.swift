@@ -36,6 +36,7 @@ extension UIViewController {
         }
     }
 
+    // MARK: - Create a new searh history at the model
     func create(searchHistory: SearchHistoryData, completion: @escaping (Bool) -> Void) {
         var newHistory: [String: Any] = [
             "city" : searchHistory.search.city,
@@ -53,9 +54,33 @@ extension UIViewController {
             newHistory["weatherWind"] = weather.wind
         }
 
+        self.delete(entity: "Search")
         self.create(entity: "SearchHistory", data: newHistory, completion: completion)
     }
 
+    // MARK: - Delete a requested searh history at the model
+    func delete(searchHistory: SearchHistoryData, completion: (Bool) -> Void) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let persistentContainer = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SearchHistory")
+        fetchRequest.includesPropertyValues = false
+
+        do {
+            let result = try persistentContainer.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                if (data.value(forKey: "weatherDate") as! Date) == searchHistory.weather?.date {
+                    persistentContainer.delete(data)
+                }
+            }
+            try persistentContainer.save()
+            completion(true)
+        } catch {
+            print("LOG: Error to delete all data from New Search Entity")
+            completion(false)
+        }
+    }
+
+    // MARK: - Retrieve all the search history data
     func retrieveSearchHistory(completion: ([SearchHistoryData]) -> Void) {
         self.read(entity: "SearchHistory") { response in
             if let response = response {
@@ -127,19 +152,21 @@ extension UIViewController {
 
     // MARK: - CRUD: Delete all data at one specific entity
     fileprivate func delete(entity: String) {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let persistentContainer = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
-        fetchRequest.includesPropertyValues = false
-
-        do {
-            let result = try persistentContainer.fetch(fetchRequest)
-            for data in result as! [NSManagedObject] {
-                persistentContainer.delete(data)
+        DispatchQueue.main.async {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            let persistentContainer = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+            fetchRequest.includesPropertyValues = false
+            
+            do {
+                let result = try persistentContainer.fetch(fetchRequest)
+                for data in result as! [NSManagedObject] {
+                    persistentContainer.delete(data)
+                }
+                try persistentContainer.save()
+            } catch {
+                print("LOG: Error to delete all data from New Search Entity")
             }
-            try persistentContainer.save()
-        } catch {
-            print("LOG: Error to delete all data from New Search Entity")
         }
     }
 }

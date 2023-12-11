@@ -13,6 +13,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
 
     // MARK: - UIViewController Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()

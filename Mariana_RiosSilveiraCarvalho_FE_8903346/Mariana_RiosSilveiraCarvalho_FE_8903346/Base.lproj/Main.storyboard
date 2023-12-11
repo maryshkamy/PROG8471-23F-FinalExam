@@ -304,7 +304,7 @@
         <!--Weather-->
         <scene sceneID="Qhw-KS-bn5">
             <objects>
-                <viewController title="Weather" id="8Xw-1H-Y6O" customClass="WeatherViewController" customModule="Mariana_RiosSilveiraCarvalho_FE_8903346" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Weather" title="Weather" id="8Xw-1H-Y6O" customClass="WeatherViewController" customModule="Mariana_RiosSilveiraCarvalho_FE_8903346" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xMw-KB-dIG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

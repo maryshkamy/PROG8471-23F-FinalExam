@@ -11,6 +11,7 @@ import Foundation
 protocol HistoryViewModelProtocol {
     var dataSource: [SearchHistoryData] { get }
     func load(data: [SearchHistoryData])
+    func remove(index: Int)
 }
 
 class HistoryViewModel: HistoryViewModelProtocol {
@@ -25,5 +26,9 @@ class HistoryViewModel: HistoryViewModelProtocol {
     // MARK: - Protocol Functions
     func load(data: [SearchHistoryData]) {
         self.dataSource = data
+    }
+
+    func remove(index: Int) {
+        self.dataSource.remove(at: index)
     }
 }

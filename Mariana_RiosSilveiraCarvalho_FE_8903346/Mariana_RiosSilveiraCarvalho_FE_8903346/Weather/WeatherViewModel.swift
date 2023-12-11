@@ -15,6 +15,7 @@ protocol WeatherViewModelDelegate: AnyObject {
 
 protocol WeatherViewModelProtocol: AnyObject {
     var delegate: WeatherViewModelDelegate? { get set }
+    func load(_ weatherData: WeatherData)
     func didUpdateLocation(_ newSearchData: SearchData)
 }
 
@@ -26,6 +27,20 @@ class WeatherViewModel: WeatherViewModelProtocol {
     weak var delegate: WeatherViewModelDelegate?
 
     // MARK: - Protocol Functions
+    func load(_ weatherData: WeatherData) {
+        if let urlIcon = URL(string: weatherData.icon) {
+            self.delegate?.updateView(
+                city: weatherData.city,
+                description: weatherData.description,
+                icon: urlIcon,
+                temperature: "\(weatherData.temperature.toInt())º",
+                humidity: "Humidity: \(weatherData.humidity)%",
+                windSpeed: "Wind: \(weatherData.wind.toKmPerHour().toString()) km/h")
+        } else {
+            self.delegate?.showError()
+        }
+    }
+
     func didUpdateLocation(_ newSearchData: SearchData) {
         self.requestInfo(from: newSearchData)
     }

@@ -12,10 +12,24 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let persistentContainer = self.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Search")
+        fetchRequest.includesPropertyValues = false
+
+        do {
+            let result = try persistentContainer.fetch(fetchRequest)
+            for data in result as! [NSManagedObject] {
+                persistentContainer.delete(data)
+            }
+            try persistentContainer.save()
+        } catch {
+            print("LOG: Error to delete all data from New Search Entity")
+        }
+
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    // MARK: - UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
