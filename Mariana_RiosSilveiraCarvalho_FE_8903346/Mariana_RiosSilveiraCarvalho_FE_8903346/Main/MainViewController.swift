@@ -51,8 +51,8 @@ class MainViewController: UIViewController {
             return
         }
 
-        let newSearchData = NewSearchData(city: city, source: source, type: type)
-        self.create(newSearchData) { response in
+        let newSearchData = SearchData(city: city, source: source, type: type)
+        self.create(searchData: newSearchData) { response in
             if response {
                 self.navigationController?.tabBarController?.selectedIndex = index
             } else {

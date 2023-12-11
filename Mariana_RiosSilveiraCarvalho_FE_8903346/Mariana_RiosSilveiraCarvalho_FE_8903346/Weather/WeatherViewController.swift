@@ -42,7 +42,7 @@ class WeatherViewController: UIViewController {
             if let data = newSearchData {
                 self.icon.image = UIImage()
                 self.activityIndicator.startAnimating()
-                self.viewModel.didUpdateLocation(city: data.city)
+                self.viewModel.didUpdateLocation(data)
             } else {
                 self.createNewSearchAlert { _ in
                     self.navigationController?.tabBarController?.selectedIndex = 0
@@ -85,10 +85,10 @@ class WeatherViewController: UIViewController {
             self.icon.image = UIImage()
             self.activityIndicator.startAnimating()
 
-            let newSearchData = NewSearchData(city: text, source: "Weather", type: "Weather")
-            self.create(newSearchData) { response in
+            let newSearchData = SearchData(city: text, source: "Weather", type: "Weather")
+            self.create(searchData: newSearchData) { response in
                 if response {
-                    self.viewModel.didUpdateLocation(city: text)
+                    self.viewModel.didUpdateLocation(newSearchData)
                 } else {
                     self.showErrorAlert("Error", "Something wrong. Please try again.")
                 }
@@ -135,5 +135,11 @@ extension WeatherViewController: WeatherViewModelDelegate {
             self.temperatureLabel.text = temperature
         }
 
+    }
+
+    func updateCoreData(with searchData: SearchData, and weather: WeatherData) {
+        self.create(searchHistory: SearchHistoryData(search: searchData, weather: weather)) { response in
+            print(response)
+        }
     }
 }

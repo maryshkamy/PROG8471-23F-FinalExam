@@ -10,11 +10,12 @@ import Foundation
 protocol WeatherViewModelDelegate: AnyObject {
     func showError()
     func updateView(city: String, description: String, icon: URL, temperature: String, humidity: String, windSpeed: String)
+    func updateCoreData(with searchData: SearchData, and weather: WeatherData)
 }
 
 protocol WeatherViewModelProtocol: AnyObject {
     var delegate: WeatherViewModelDelegate? { get set }
-    func didUpdateLocation(city: String)
+    func didUpdateLocation(_ newSearchData: SearchData)
 }
 
 class WeatherViewModel: WeatherViewModelProtocol {
@@ -25,19 +26,34 @@ class WeatherViewModel: WeatherViewModelProtocol {
     weak var delegate: WeatherViewModelDelegate?
 
     // MARK: - Protocol Functions
-    func didUpdateLocation(city: String) {
-        self.requestInfo(from: city)
+    func didUpdateLocation(_ newSearchData: SearchData) {
+        self.requestInfo(from: newSearchData)
     }
 
     // MARK: - Private Functions
-    private func requestInfo(from city: String) {
-        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&units=metric&appid=ad731160c722a3a494799520030786b5") else { return }
+    private func requestInfo(from newSearchData: SearchData) {
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(newSearchData.city)&units=metric&appid=ad731160c722a3a494799520030786b5") else { return }
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             if let data = data {
                 do {
                     self.weather = try JSONDecoder().decode(Weather.self, from: data)
+
                     if let weather = self.weather, let weatherInfo = weather.weather.first, let urlIcon = URL(string: "https://openweathermap.org/img/wn/\(weatherInfo.icon)@2x.png") {
                         print(weather)
+
+                        self.delegate?.updateCoreData(
+                            with: newSearchData,
+                            and: WeatherData(
+                                city: weather.name,
+                                date: Date.now,
+                                description: weather.weather.first?.main ?? "",
+                                humidity: weather.main.humidity,
+                                icon: urlIcon.absoluteString,
+                                temperature: weather.main.temp,
+                                wind: weather.wind.speed
+                            )
+                        )
+
                         self.delegate?.updateView(
                             city: weather.name,
                             description: weather.weather.first?.main ?? "",
