@@ -44,6 +44,14 @@ extension UIViewController {
             "type": searchHistory.search.type,
         ]
 
+        if let news = searchHistory.news {
+            newHistory["newsAuthor"] = news.author
+            newHistory["newsDescription"] = news.description
+            newHistory["newsPublishedAt"] = news.publishedAt
+            newHistory["newsSource"] = news.source
+            newHistory["newsTitle"] = news.title
+        }
+
         if let weather = searchHistory.weather {
             newHistory["weatherCity"] = weather.city
             newHistory["weatherDate"] = weather.date
@@ -93,6 +101,17 @@ extension UIViewController {
                         type: data.value(forKey: "type") as! String
                     )
 
+                    var newsData: NewsData?
+                    if (data.value(forKey: "newsAuthor") as? String) != nil {
+                        newsData = NewsData(
+                            author: data.value(forKey: "newsAuthor") as! String,
+                            description: data.value(forKey: "newsDescription") as! String,
+                            publishedAt: data.value(forKey: "newsPublishedAt") as! String,
+                            source: data.value(forKey: "newsSource") as! String,
+                            title: data.value(forKey: "newsTitle") as! String
+                        )
+                    }
+
                     var weatherData: WeatherData?
                     if (data.value(forKey: "weatherCity") as? String) != nil {
                         weatherData = WeatherData(
@@ -106,7 +125,7 @@ extension UIViewController {
                         )
                     }
 
-                    searchHistory.append(SearchHistoryData(search: searchData, weather: weatherData))
+                    searchHistory.append(SearchHistoryData(search: searchData, news: newsData, weather: weatherData))
                 }
 
                 completion(searchHistory)

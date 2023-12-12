@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WeatherTableViewCell: UITableViewCell {
+class WeatherHistoryTableViewCell: UITableViewCell {
 
     // MARK: - @IBOutlets Weather
     @IBOutlet weak var type: UILabel!

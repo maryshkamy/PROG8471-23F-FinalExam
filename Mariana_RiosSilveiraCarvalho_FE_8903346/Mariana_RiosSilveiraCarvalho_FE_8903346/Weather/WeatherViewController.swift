@@ -22,7 +22,7 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
 
     // MARK: - Private Variables
-    private let viewModel: WeatherViewModelProtocol
+    private var viewModel: WeatherViewModelProtocol
 
     // MARK: - Public Variables
     var weatherData: WeatherData?
@@ -39,14 +39,14 @@ class WeatherViewController: UIViewController {
     }
 
     // MARK: - UIViewController Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadData()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.loadData()
     }
 
     // MARK: - Private Functions
@@ -155,7 +155,7 @@ extension WeatherViewController: WeatherViewModelDelegate {
 
     func updateCoreData(with searchData: SearchData, and weather: WeatherData) {
         self.weatherData = weather
-        self.create(searchHistory: SearchHistoryData(search: searchData, weather: weather)) { response in
+        self.create(searchHistory: SearchHistoryData(search: searchData, news: nil, weather: weather)) { response in
             print(response)
         }
     }

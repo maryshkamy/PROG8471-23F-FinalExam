@@ -7,6 +7,11 @@
     </entity>
     <entity name="SearchHistory" representedClassName="SearchHistory" syncable="YES" codeGenerationType="class">
         <attribute name="city" attributeType="String"/>
+        <attribute name="newsAuthor" optional="YES" attributeType="String"/>
+        <attribute name="newsDescription" optional="YES" attributeType="String"/>
+        <attribute name="newsPublishedAt" optional="YES" attributeType="String"/>
+        <attribute name="newsSource" optional="YES" attributeType="String"/>
+        <attribute name="newsTitle" optional="YES" attributeType="String"/>
         <attribute name="source" attributeType="String"/>
         <attribute name="type" attributeType="String"/>
         <attribute name="weatherCity" optional="YES" attributeType="String"/>

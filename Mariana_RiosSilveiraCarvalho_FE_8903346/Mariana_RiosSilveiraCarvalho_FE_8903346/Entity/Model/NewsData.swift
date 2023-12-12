@@ -8,5 +8,9 @@
 import Foundation
 
 struct NewsData {
-    
+    let author: String
+    let description: String
+    let publishedAt: String
+    let source: String
+    let title: String
 }
