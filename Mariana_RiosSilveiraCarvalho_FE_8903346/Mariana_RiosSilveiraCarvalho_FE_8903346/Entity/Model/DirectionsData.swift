@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct DirectionsData {
+    let date: Date
+    let destination: String
+    let source: String
+    let totalDistance: Double
+    let transportationType: String
+}

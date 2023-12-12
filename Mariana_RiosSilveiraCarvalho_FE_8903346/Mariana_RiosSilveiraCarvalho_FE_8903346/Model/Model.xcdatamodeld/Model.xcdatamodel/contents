@@ -7,6 +7,11 @@
     </entity>
     <entity name="SearchHistory" representedClassName="SearchHistory" syncable="YES" codeGenerationType="class">
         <attribute name="city" attributeType="String"/>
+        <attribute name="directionsDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="directionsDestination" optional="YES" attributeType="String"/>
+        <attribute name="directionsSource" optional="YES" attributeType="String"/>
+        <attribute name="directionsTotalDistance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="directionsTransportationType" optional="YES" attributeType="String"/>
         <attribute name="newsAuthor" optional="YES" attributeType="String"/>
         <attribute name="newsDescription" optional="YES" attributeType="String"/>
         <attribute name="newsPublishedAt" optional="YES" attributeType="String"/>

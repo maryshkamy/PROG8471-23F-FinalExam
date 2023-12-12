@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -280,6 +281,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ojr-OU-Voh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="CaE-s7-ftq" kind="relationship" relationship="rootViewController" id="7uI-75-VqU"/>
@@ -288,24 +290,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0J-8P-d4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1959" y="731"/>
-        </scene>
-        <!--Map-->
-        <scene sceneID="syA-0b-z81">
-            <objects>
-                <viewController title="Map" id="URw-rr-NQQ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gpC-GL-xTN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ac5-r1-ytp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Directions" id="p8G-x0-W4C">
-                        <imageReference key="image" image="location" catalog="system" symbolScale="small"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ehW-pD-R1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="38" y="732"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="BcP-Fu-utb">
@@ -316,17 +300,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="N4B-ki-DDM" kind="relationship" relationship="viewControllers" id="Zaj-BA-uAU"/>
                         <segue destination="vHW-KX-Ns9" kind="relationship" relationship="viewControllers" id="mjC-LK-Xmk"/>
-                        <segue destination="URw-rr-NQQ" kind="relationship" relationship="viewControllers" id="QcT-je-65U"/>
+                        <segue destination="WhK-WG-eXZ" kind="relationship" relationship="viewControllers" id="U2v-Ai-zys"/>
                         <segue destination="OVL-G4-pYZ" kind="relationship" relationship="viewControllers" id="KtW-s5-Gjo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97T-56-WHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-431" y="-63"/>
+        </scene>
+        <!--Directions-->
+        <scene sceneID="bUD-Xm-gwL">
+            <objects>
+                <navigationController id="WhK-WG-eXZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Directions" id="vry-z8-C8p">
+                        <imageReference key="image" image="location" catalog="system" symbolScale="small"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Nt-A5-wjQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Pmj-0k-nEi" kind="relationship" relationship="rootViewController" id="zBh-B3-jA1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nK6-AV-FTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="731"/>
         </scene>
         <!--Weather-->
         <scene sceneID="4eP-ep-4iL">
@@ -338,6 +345,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j3F-Wf-sfn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="8Xw-1H-Y6O" kind="relationship" relationship="rootViewController" id="ecY-gp-hre"/>
@@ -345,7 +353,95 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMD-17-AQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="732"/>
+            <point key="canvasLocation" x="1093" y="731"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="wyV-Nh-foj">
+            <objects>
+                <viewController storyboardIdentifier="Directions" title="Map" id="Pmj-0k-nEi" customClass="MapViewController" customModule="Mariana_RiosSilveiraCarvalho_FE_8903346" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kdh-h9-14G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="McY-gZ-3oQ">
+                                <rect key="frame" x="30" y="120" width="354" height="31"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="didChangeZoom:" destination="Gia-3S-3nT" eventType="valueChanged" id="iXR-Ja-1jT"/>
+                                    <action selector="didChangeZoom:" destination="Pmj-0k-nEi" eventType="valueChanged" id="nEQ-KO-LlG"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WJy-iv-Lmn">
+                                <rect key="frame" x="32" y="166" width="170.33333333333334" height="34.333333333333343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCv-fP-ihg">
+                                        <rect key="frame" x="0.0" y="0.0" width="54.666666666666664" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="car" catalog="system"/>
+                                        <connections>
+                                            <action selector="didTapAutoTravel:" destination="Pmj-0k-nEi" eventType="touchUpInside" id="ZC8-Cc-f91"/>
+                                            <action selector="didTapAutoTravel:" destination="Gia-3S-3nT" eventType="touchUpInside" id="ovI-Ki-GH4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcB-4a-z2g">
+                                        <rect key="frame" x="58.666666666666671" y="0.0" width="64" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bicycle" catalog="system"/>
+                                        <connections>
+                                            <action selector="didTapBikeTravel:" destination="Pmj-0k-nEi" eventType="touchUpInside" id="LuM-WS-QQd"/>
+                                            <action selector="didTapBikeTravel:" destination="Gia-3S-3nT" eventType="touchUpInside" id="iox-rE-1iL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9u-WI-9y2">
+                                        <rect key="frame" x="126.66666666666667" y="0.0" width="43.666666666666671" height="34.333333333333336"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="figure.walk" catalog="system"/>
+                                        <connections>
+                                            <action selector="didTapWalkTravel:" destination="Pmj-0k-nEi" eventType="touchUpInside" id="cxf-c6-8Il"/>
+                                            <action selector="didTapWalkTravel:" destination="Gia-3S-3nT" eventType="touchUpInside" id="eo0-hg-iLc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aER-HE-8Yo">
+                                <rect key="frame" x="0.0" y="216.33333333333331" width="414" height="596.66666666666674"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BV3-Ol-V1j"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="McY-gZ-3oQ" firstAttribute="leading" secondItem="BV3-Ol-V1j" secondAttribute="leading" constant="32" id="7d5-81-WHJ"/>
+                            <constraint firstItem="WJy-iv-Lmn" firstAttribute="top" secondItem="McY-gZ-3oQ" secondAttribute="bottom" constant="16" id="AgA-zI-cIz"/>
+                            <constraint firstItem="BV3-Ol-V1j" firstAttribute="trailing" secondItem="aER-HE-8Yo" secondAttribute="trailing" id="Mxc-1A-Blo"/>
+                            <constraint firstItem="aER-HE-8Yo" firstAttribute="leading" secondItem="BV3-Ol-V1j" secondAttribute="leading" id="SQ6-ih-4ie"/>
+                            <constraint firstItem="BV3-Ol-V1j" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WJy-iv-Lmn" secondAttribute="trailing" constant="32" id="XKd-L0-sho"/>
+                            <constraint firstItem="aER-HE-8Yo" firstAttribute="top" secondItem="WJy-iv-Lmn" secondAttribute="bottom" constant="16" id="Zqf-7J-iQA"/>
+                            <constraint firstItem="WJy-iv-Lmn" firstAttribute="leading" secondItem="BV3-Ol-V1j" secondAttribute="leading" constant="32" id="eWU-Bo-uBX"/>
+                            <constraint firstItem="McY-gZ-3oQ" firstAttribute="top" secondItem="BV3-Ol-V1j" secondAttribute="top" constant="32" id="ips-cF-N0m"/>
+                            <constraint firstItem="BV3-Ol-V1j" firstAttribute="trailing" secondItem="McY-gZ-3oQ" secondAttribute="trailing" constant="32" id="srK-D6-MWe"/>
+                            <constraint firstItem="BV3-Ol-V1j" firstAttribute="bottom" secondItem="aER-HE-8Yo" secondAttribute="bottom" id="xlm-YF-ljK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Directions" id="jbi-eY-crh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ktn-vi-g61">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapChangeCity:" destination="Pmj-0k-nEi" id="c0i-gu-Xdg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="aER-HE-8Yo" id="WE7-xU-5Mw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mf9-Ax-EdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Gia-3S-3nT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="1519"/>
         </scene>
         <!--Weather-->
         <scene sceneID="Qhw-KS-bn5">
@@ -443,6 +539,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Weather" id="tdI-OA-GqU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8uq-v6-Zdq">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="didTapChangeCity:" destination="8Xw-1H-Y6O" id="FzN-gi-GVZ"/>
                             </connections>
@@ -556,7 +653,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nW-bC-lAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-975.36231884057975" y="1520.7589285714284"/>
+            <point key="canvasLocation" x="-975" y="1521"/>
         </scene>
         <!--News-->
         <scene sceneID="bpR-Rs-qyy">
@@ -568,6 +665,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CWh-fp-7Vi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <connections>
                         <segue destination="wYn-lm-ftK" kind="relationship" relationship="rootViewController" id="j6k-Sw-Sdw"/>
@@ -581,7 +679,10 @@
     <resources>
         <image name="Background" width="626" height="417"/>
         <image name="Mari" width="796" height="799"/>
+        <image name="bicycle" catalog="system" width="128" height="78"/>
         <image name="bolt" catalog="system" width="100" height="128"/>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="location" catalog="system" width="128" height="119"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>

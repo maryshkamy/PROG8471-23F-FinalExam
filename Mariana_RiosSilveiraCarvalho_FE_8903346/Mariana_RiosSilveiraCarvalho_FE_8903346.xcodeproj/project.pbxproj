@@ -42,6 +42,7 @@
 		287E74142B2521AD0093C604 /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */; };
 		28FE717F2B27DFAA00F5505B /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE717E2B27DFAA00F5505B /* NewsTableViewCell.swift */; };
 		28FE71812B27E99300F5505B /* NewsHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE71802B27E99300F5505B /* NewsHistoryTableViewCell.swift */; };
+		28FE71842B27FB4200F5505B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE71832B27FB4200F5505B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
 		28FE717E2B27DFAA00F5505B /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		28FE71802B27E99300F5505B /* NewsHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		28FE71832B27FB4200F5505B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 				287E74022B24FBFD0093C604 /* LaunchScreen.storyboard */,
 				282BA9BC2B25303800A4E6B4 /* Main */,
 				286597642B2531DE006D51D0 /* Main.storyboard */,
+				28FE71822B27FAEC00F5505B /* Map */,
 				286597822B258615006D51D0 /* Model */,
 				2865979D2B26F92C006D51D0 /* News */,
 				286597672B255A68006D51D0 /* Weather */,
@@ -232,6 +235,14 @@
 				287E74132B2521AD0093C604 /* UIViewController+UIAlertController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		28FE71822B27FAEC00F5505B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				28FE71832B27FB4200F5505B /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +338,7 @@
 				2865978F2B26B80D006D51D0 /* HistoryTableViewController.swift in Sources */,
 				286597852B258643006D51D0 /* Model.xcdatamodeld in Sources */,
 				286597912B26C2FB006D51D0 /* HistoryViewModel.swift in Sources */,
+				28FE71842B27FB4200F5505B /* MapViewController.swift in Sources */,
 				286597772B256535006D51D0 /* Coordinate.swift in Sources */,
 				286597792B256539006D51D0 /* Main.swift in Sources */,
 				286597982B26F844006D51D0 /* News.swift in Sources */,

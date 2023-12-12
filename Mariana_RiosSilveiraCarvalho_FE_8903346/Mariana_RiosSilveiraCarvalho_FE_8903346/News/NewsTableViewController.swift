@@ -146,7 +146,7 @@ extension NewsTableViewController: NewsViewModelDelegate {
     }
 
     func updateCoreData(with searchData: SearchData, and news: NewsData) {
-        let data = SearchHistoryData(search: searchData, news: news, weather: nil)
+        let data = SearchHistoryData(search: searchData, news: news, directions: nil, weather: nil)
         self.searchHistoryData = data
         self.create(searchHistory: data) { response in
             print(response)

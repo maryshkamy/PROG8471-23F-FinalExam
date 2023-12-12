@@ -52,6 +52,14 @@ extension UIViewController {
             newHistory["newsTitle"] = news.title
         }
 
+        if let directions = searchHistory.directions {
+            newHistory["directionsDate"] = directions.date
+            newHistory["directionsDestination"] = directions.destination
+            newHistory["directionsSource"] = directions.source
+            newHistory["directionsTotalDistance"] = directions.totalDistance
+            newHistory["directionsTransportationType"] = directions.transportationType
+        }
+
         if let weather = searchHistory.weather {
             newHistory["weatherCity"] = weather.city
             newHistory["weatherDate"] = weather.date
@@ -76,8 +84,20 @@ extension UIViewController {
         do {
             let result = try persistentContainer.fetch(fetchRequest)
             for data in result as! [NSManagedObject] {
-                if (data.value(forKey: "weatherDate") as! Date) == searchHistory.weather?.date {
-                    persistentContainer.delete(data)
+                if searchHistory.news != nil {
+                    if (data.value(forKey: "newsPublishedAt") as! String) == searchHistory.news?.publishedAt {
+                        persistentContainer.delete(data)
+                    }
+                }
+                if searchHistory.directions != nil {
+                    if (data.value(forKey: "directionsDate") as! Date) == searchHistory.directions?.date {
+                        persistentContainer.delete(data)
+                    }
+                }
+                if searchHistory.weather != nil {
+                    if (data.value(forKey: "weatherDate") as! Date) == searchHistory.weather?.date {
+                        persistentContainer.delete(data)
+                    }
                 }
             }
             try persistentContainer.save()
@@ -112,6 +132,17 @@ extension UIViewController {
                         )
                     }
 
+                    var directionsData: DirectionsData?
+                    if (data.value(forKey: "directionsSource") as? String) != nil {
+                        directionsData = DirectionsData(
+                            date: data.value(forKey: "directionsDate") as! Date,
+                            destination: data.value(forKey: "directionsDestination") as! String,
+                            source: data.value(forKey: "directionsSource") as! String,
+                            totalDistance: data.value(forKey: "directionsTotalDistance") as! Double,
+                            transportationType: data.value(forKey: "directionsTransportationType") as! String
+                        )
+                    }
+
                     var weatherData: WeatherData?
                     if (data.value(forKey: "weatherCity") as? String) != nil {
                         weatherData = WeatherData(
@@ -125,7 +156,7 @@ extension UIViewController {
                         )
                     }
 
-                    searchHistory.append(SearchHistoryData(search: searchData, news: newsData, weather: weatherData))
+                    searchHistory.append(SearchHistoryData(search: searchData, news: newsData, directions: directionsData, weather: weatherData))
                 }
 
                 completion(searchHistory)

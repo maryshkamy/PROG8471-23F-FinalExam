@@ -155,7 +155,7 @@ extension WeatherViewController: WeatherViewModelDelegate {
 
     func updateCoreData(with searchData: SearchData, and weather: WeatherData) {
         self.weatherData = weather
-        self.create(searchHistory: SearchHistoryData(search: searchData, news: nil, weather: weather)) { response in
+        self.create(searchHistory: SearchHistoryData(search: searchData, news: nil, directions: nil, weather: weather)) { response in
             print(response)
         }
     }

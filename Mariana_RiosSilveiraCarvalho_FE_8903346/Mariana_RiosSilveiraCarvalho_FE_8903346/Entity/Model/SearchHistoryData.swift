@@ -10,6 +10,6 @@ import Foundation
 struct SearchHistoryData {
     let search: SearchData
     let news: NewsData?
-//    let directions: Any?
+    let directions: DirectionsData?
     let weather: WeatherData?
 }
