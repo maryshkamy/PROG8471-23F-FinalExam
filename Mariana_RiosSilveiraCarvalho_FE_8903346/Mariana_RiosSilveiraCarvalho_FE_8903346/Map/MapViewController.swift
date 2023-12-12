@@ -132,11 +132,10 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func didChangeZoom(_ sender: UISlider) {
-        if let location = self.locationManager.location?.coordinate {
-            let span = MKCoordinateSpan(latitudeDelta: Double(sender.value), longitudeDelta: Double(sender.value))
-            let region = MKCoordinateRegion(center: location, span: span)
-            self.mapView.setRegion(region, animated: true)
-        }
+        let rect = self.mapView.region.center
+        let span = MKCoordinateSpan(latitudeDelta: .init(sender.value * -1), longitudeDelta: .init(sender.value * -1))
+        let region = MKCoordinateRegion(center: rect, span: span)
+        self.mapView.setRegion(region, animated: true)
     }
 
     @IBAction func didTapAutoTravel(_ sender: UIButton) {
